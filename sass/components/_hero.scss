@@ -1,0 +1,59 @@
+.hero {
+    display: flex;
+    background-color: $bcgColor;
+    
+    height: 400px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/index/bc-image.jpg);
+    background-repeat: no-repeat;
+
+    margin-left: auto;
+    margin-right: auto;
+    background-size: 480px 400px;
+    &__title {
+      font-weight: 900;
+      font-size: 26px;
+      line-height: 1.62;
+      text-align: center;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: $lightColor;
+      margin-bottom: 30px;
+    }
+  }
+  
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image:linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/index/bc-image2x.jpg");
+  }
+}
+.btn {
+  
+    width: 200px;
+    height: 50px;
+    padding: 0;
+    border: 0;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    color: $lightColor;
+    background-color: $accentColor;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    cursor: pointer;
+
+    transition: background-color $transitionDuration $timingFunction;
+    &:hover,
+    &:focus {
+      background-color: $hoverColor;
+    
+  }
+}

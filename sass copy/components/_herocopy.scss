@@ -1,0 +1,52 @@
+.hero {
+  display: flex;
+  background-color: $bcgColor;
+  height: 600px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/index/bc-image.jpg);
+  background-repeat: no-repeat;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-size: cover;
+  &__title {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.4;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $lightColor;
+    width: 696px;
+    margin-bottom: 30px;
+  }
+}
+.btn {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  color: $lightColor;
+  background-color: $accentColor;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+  width: 200px;
+  height: 50px;
+  padding: 0;
+  border: 0;
+  transition: background-color $transitionDuration $timingFunction;
+  &:hover,
+  &:focus {
+    background-color: $hoverColor;
+  }
+}

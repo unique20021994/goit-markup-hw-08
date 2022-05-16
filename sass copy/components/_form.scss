@@ -1,0 +1,67 @@
+.form {
+  padding: 40px;
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    color: $primaryColor;
+    margin-bottom: 12px;
+  }
+  &__field {
+    margin-bottom: 10px;
+    position: relative;
+  }
+  &__label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4px;
+    color: $secondaryColor;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+  }
+}
+.form__textarea {
+  margin-bottom: 20px;
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  width: 100%;
+  height: 120px;
+  resize: none;
+  transition: border-color $transitionDuration $timingFunction;
+  &:hover,
+  &:focus {
+    border-color: $accentColor;
+    outline: none;
+  }
+}
+.form__input {
+  position: relative;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  width: 100%;
+  height: 40px;
+  font: inherit;
+  padding-left: 42.5px;
+  transition: border-color $transitionDuration $timingFunction;
+  &:hover,
+  &:focus {
+    border-color: $accentColor;
+    outline: none;
+  }
+  &:hover ~ .form__icon,
+  &:focus ~ .form__icon {
+    fill: $accentColor;
+  }
+}
+.form__icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transition: fill $transitionDuration $timingFunction;
+  &:hover {
+    fill: $accentColor;
+  }
+}

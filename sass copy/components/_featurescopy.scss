@@ -1,0 +1,38 @@
+.features {
+  padding-top: 94px;
+  &__features-list {
+    display: flex;
+  }
+  &__label {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $primaryColor;
+    margin-bottom: 10px;
+  }
+  &__text {
+    line-height: 24px;
+    color: $secondaryColor;
+    margin-bottom: 0;
+  }
+}
+.features__features-items {
+  margin-right: 30px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.features__icon {
+  display: flex;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  justify-content: center;
+  background-color: $bcgColorCards;
+  border-radius: 4px;
+  transition: filter $transitionDuration $timingFunction;
+  &:hover {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+}

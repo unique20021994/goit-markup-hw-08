@@ -1,0 +1,15 @@
+.logo {
+  font-family: Raleway, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  color: $accentColor;
+  &--black {
+    color: $logoTextColor;
+    margin-right: 93px;
+  }
+  &--white {
+    color: $lightColor;
+  }
+}

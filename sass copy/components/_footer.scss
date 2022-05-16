@@ -1,0 +1,130 @@
+.footer {
+  display: flex;
+  background-color: $bcgColor;
+  color: $lightColor;
+  height: 252px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  &__logo {
+    margin-bottom: 20px;
+  }
+  &__address-link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    color: $lightColor;
+    padding: 0;
+  }
+  &__contacts {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    color: $addressTextColor;
+  }
+  & .container {
+    display: inline-flex;
+  }
+  &__social {
+    margin-top: 12px;
+    margin-left: 70px;
+  }
+  &__social-title {
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $lightColor;
+    margin-bottom: 20px;
+  }
+  &__social-list {
+    display: flex;
+  }
+  &__icon {
+    fill: $iconColor;
+    transition: fill $transitionDuration $timingFunction;
+  }
+}
+.footer__address-list {
+  margin-bottom: 9px;
+  &:last-child {
+    margin-bottom: 0px;
+  }
+}
+.footer__icons {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  justify-content: center;
+  margin-right: 10px;
+  background-color: $bcgIcon;
+  transition: background-color $transitionDuration $timingFunction;
+  &:hover,
+  &:focus {
+    background-color: $accentColor;
+    cursor: pointer;
+  }
+  &:hover .footer__icon,
+  &:focus .footer__icon {
+    fill: $lightColor;
+  }
+}
+
+.subscribe {
+  margin-top: 12px;
+  margin-left: auto;
+
+  &__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.43;
+    text-transform: uppercase;
+    color: $lightColor;
+    margin-bottom: 20px;
+  }
+
+  &__btn {
+    display: flex;
+    width: 200px;
+    height: 50px;
+    padding-left: 29px;
+    background: $accentColor;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    color: $lightColor;
+    cursor: pointer;
+  }
+  &__icon {
+    margin-left: 10px;
+  }
+}
+.subsribe__list {
+  display: flex;
+}
+.subsribe__mail {
+  width: 358px;
+  height: 50px;
+  padding-left: 16px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  transition: color $transitionDuration $timingFunction;
+  &:hover,
+  &:focus {
+    outline: none;
+    color: $lightColor;
+    font: inherit;
+  }
+}
+.subsribe__input {
+  margin-right: 12px;
+}
