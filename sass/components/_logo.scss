@@ -8,7 +8,7 @@
     color: $accentColor;
     &--black {
       color: $logoTextColor;
-      
+           
     }
     &--white {
       color: $lightColor;
@@ -25,9 +25,10 @@
     font-size: 26px;
     line-height: 1.2;
     color: $accentColor;
+    margin-right: 0;
     &--black {
       color: $logoTextColor;
-      
+      margin-right: 93px;
     }
     &--white {
       color: $lightColor;

@@ -19,9 +19,23 @@
       margin-right: 0;
     }
   }
+  @media screen and (min-width: 1200px) {
+    height: 252px;
+    &__address {
+      margin-right: 70px;
+      margin-left: 0;
+  }
+  & .container {
+    flex-wrap: nowrap;
+  }
+  }
+
   &__logo {
     margin-bottom: 20px;
     text-align: center;
+    @media screen and (min-width: 1200px) {
+      text-align: start;
+    }
   }
   &__address-link {
     font-style: normal;
@@ -30,6 +44,7 @@
     line-height: 1.71;
     color: $lightColor;
     padding: 0;
+    
   }
   &__contacts {
     font-style: normal;
@@ -43,6 +58,9 @@
     @media screen and (min-width:768px){
       margin-top: 0; 
     }
+    @media screen and (min-width:1200px){
+      margin-top: 12px; 
+    }
   }
   &__social-title {
     font-size: 14px;
@@ -51,6 +69,9 @@
     color: $lightColor;
     margin-bottom: 20px;
     text-align: center;
+    @media screen and (min-width: 1200px){
+      text-align: start; 
+    }
   }
   &__social-list {
     display: flex;
@@ -70,6 +91,9 @@
   margin-bottom: 8px;
   &:last-child {
     margin-bottom: 0px;
+  }
+  @media screen and (min-width: 1200px) {
+    text-align: start;
   }
 }
 .footer__icons {
@@ -100,6 +124,11 @@
     margin-left: auto;
     margin-right: auto;
   }
+  @media screen and (min-width: 1200px){
+    margin-top: 12px;
+    margin-right: 0;
+    }
+   
 
   &__title {
     font-weight: 700;
@@ -109,6 +138,9 @@
     color: $lightColor;
     margin-bottom: 20px;
     text-align: center;
+    @media screen and (min-width: 1200px){
+      text-align: start;
+      }
   }
 
   &__btn {
@@ -134,6 +166,11 @@
     margin-left: 10px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .subsribe__list {
+display:flex;
+  }
+}
 
 .subsribe__mail {
   width: 100%;
@@ -153,6 +190,11 @@
   }
   @media screen and (min-width:768px){
     width: 450px;
+  }
+  @media screen and (min-width:1200px){
+    width: 358px;
+    margin-bottom: 0;
+    margin-right: 12px;
   }
 }
 .subsribe__input {
