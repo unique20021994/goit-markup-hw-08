@@ -4,7 +4,6 @@
   min-height: 60px;
   align-items: center;
   border-bottom: 1px solid $headerBorderColor;
-  
   &__menu-btn {
     display: inline-flex;
     width: 40px;
@@ -29,9 +28,16 @@
   &__contacts {
     margin-top: 302px;
     padding-left: 25px;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-direction: column-reverse;
+      margin-top: 0px;
+      padding-left: 0px;
+    }
   }
 }
-@media screen and(max-width: 768px) {
+
+@media screen and(max-width: 767px) {
   .phone .header__contacts-link {
     font-weight: 500;
     font-size: 34px;
@@ -47,14 +53,28 @@
     color: #757575;
   }
 }
+
 .phone {
   margin-bottom: 32px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0px;
+  }
 }
 .mail {
   margin-bottom: 64px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 10px;
+  }
 }
 .header__nav-item {
   margin-bottom: 32px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+    margin-right: 50px;
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
 }
 .header__nav-item:last-child {
   margin-bottom: 0px;
@@ -65,14 +85,22 @@
   line-height: 1.18;
   letter-spacing: 0.02em;
   color: $primaryColor;
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 1.14;
+    transition: color $transitionDuration $timingFunction;
+    &:hover,
+    &:focus {
+      color: $accentColor;
+    }
+  }
 }
-
 .header__nav-link:hover,
 .header__nav-item:focus {
   color: $accentColor;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .header__mail-icon {
     display: none;
   }
@@ -103,44 +131,106 @@
     }
   }
 }
-
-.menu-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  padding: 10px 15px;
-  background-color: $lightColor;
-  transform: translateX(100%);
-  transition: transform $transitionDuration $timingFunction;
-  z-index: 999;
+@media screen and (max-width: 767px) {
+  .menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 10px 15px;
+    background-color: $lightColor;
+    transform: translateX(100%);
+    transition: transform $transitionDuration $timingFunction;
+    z-index: 999;
+  }
+  .menu-container.is-open {
+    transform: translateX(0);
+  }
 }
-.menu-container.is-open {
-  transform: translateX(0);
-}
-
 .menu-toggle {
+  display: flex;
   position: absolute;
   top: 10px;
   right: 15px;
   padding: 0;
   min-width: 40px;
   min-height: 40px;
-  display: flex;
-  background-color: transparent;
   align-items: center;
   justify-content: center;
+  background-color: transparent;
   border: none;
   cursor: pointer;
   fill: $primaryColor;
 }
-@media (min-width: 768px) {
-  .menu-toggle {
-    display: none;
-  }
-}
 .menu-toggle:hover,
 .menu-toggle:focus {
   fill: $accentColor;
+}
+@media screen and (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+  .header {
+    height: 80px;
+  }
+  .header__menu-btn {
+    display: none;
+  }
+  .header__nav {
+    display: flex;
+    margin-right: 84px;
+    margin-left: auto;
+    align-items: center;
+    padding: 0;
+  }
+
+  .menu-container {
+    display: flex;
+    position: static;
+  }
+  .menu-social {
+    display: none;
+  }
+  .phone .header__contacts-link,
+  .mail .header__contacts-link {
+    display: flex;
+    align-items: center;
+  }
+
+  .header__phone-icon {
+    height: 14px;
+    fill: $secondaryColor;
+    margin-right: 8px;
+  }
+  .header__mail-icon {
+    width: 14px;
+    height: 10px;
+    fill: $secondaryColor;
+    margin-right: 8px;
+  }
+  .header__contacts-link {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: $secondaryColor;
+    text-align: center;
+  }
+  .header__nav-link.current {
+    display: block;
+    position: relative;
+    color: $accentColor;
+    &::after {
+      display: block;
+      content: '';
+      width: 100%;
+      height: 4px;
+      background-color: $accentColor;
+      position: absolute;
+      left: 0;
+      bottom: -32px;
+      border-radius: 2px;
+    }
+  }
 }

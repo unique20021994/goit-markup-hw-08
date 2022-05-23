@@ -1,6 +1,8 @@
 .features {
  
-    padding-top: 60px;
+    padding-top: 60px;  
+    padding-bottom: 60px;
+    
 
     &__label {
       font-weight: 700;
@@ -16,7 +18,14 @@
       color: $secondaryColor;
       margin-bottom: 30px;
     }
+    @media screen and (min-width: 768px) {
+      &__features-list {
+        display: flex;
+        flex-wrap:wrap;
+        flex-basis: calc((100% - 30px)/2);
+      }  
   }
+}
   @media screen and (min-width: 1200px) {
     &__features-list {
       display: flex;
@@ -27,6 +36,13 @@
   
 }
 .features__features-items {
+  @media screen and (min-width: 768px) {
+    width: 354px;
+    margin-right: 30px;
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
   
   @media screen and (min-width: 1200px) {
     margin-right: 30px;

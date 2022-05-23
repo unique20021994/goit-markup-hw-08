@@ -6,7 +6,7 @@
     width: 16px;
     height: 15px;
     border-radius: 2px;
-    margin-right: 8.38px;
+    margin-right: 8px;
     border: 2px solid $primaryColor;
   }
   &__icon {
@@ -17,15 +17,14 @@
     display: flex;
     align-items: center;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    font: inherit;
+    font-size: 12px;
+    line-height: 1.17;
     color: $secondaryColor;
   }
   &__link {
     color: $accentColor;
     text-decoration-line: underline;
-    line-height: 1.71;
+    line-height: 1.17;
   }
 }
 .checkbox__body {
