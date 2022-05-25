@@ -169,7 +169,13 @@
           <ul class="portfolio__list list">
             <li class="portfolio__item">
               <div class="portfolio__thumb">
-                <img src="./images/index/box-1.jpg" alt="разработка" width="370" height="294" />
+                <img
+                  srcset="./images/index/deskx.jpg 1x, ./images/index/desk2x.jpg 2x"
+                  src="./images/index/box-1.jpg"
+                  alt="разработка"
+                  width="370"
+                  height="294"
+                />
                 <div class="portfolio__overlay">
                   <p class="portfolio__label">Десктопные приложения</p>
                 </div>
@@ -178,6 +184,7 @@
             <li class="portfolio__item">
               <div class="portfolio__thumb">
                 <img
+                  srcset="./images/index/mobx.jpg 1x, ./images/index/mob2x.jpg 2x"
                   src="./images/index/box-2.jpg"
                   alt="оптимизация под мобильные версии"
                   width="370"
@@ -191,7 +198,7 @@
             </li>
             <li class="portfolio__item">
               <div class="portfolio__thumb">
-                <img src="./images/index/box-3.jpg" alt="подбор цвета" width="370" height="294" />
+                <img srcset="./images/index/designx.jpg 1x, ./images/index/design2x.jpg 2x" src="./images/index/box-3.jpg" alt="подбор цвета" width="370" height="294" />
                 <div class="portfolio__overlay">
                   <p class="portfolio__label">Дизайнерские решения</p>
                 </div>
@@ -208,13 +215,30 @@
 
           <ul class="team__list list">
             <li class="team__item">
-              <img
-                srcset="./images/index/person1x.jpg 1x, ./images/index/person2x.jpg 2x"
-                src="./images/index/img-1_person.jpg"
-                alt="Фотография Игоря Демьяненко"
-                width="450"
-                height="460"
-              />
+              <picture>
+                <source
+                  srcset="./images/index/igordesk.jpg 1x, ./images/index/igordesk2x.jpg 2x"
+                  media="(min-width:1200px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="./images/index/igortab.jpg 1x, ./images/index/igortab2x.jpg 2x"
+                  media="(min-width:768px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="./images/index/igormob.jpg 1x, ./images/index/igormob2x.jpg 2x"
+                  media="(max-width:767px)"
+                  type="image/jpeg"
+                />
+                <img
+                  srcset="./images/index/person1x.jpg 1x, ./images/index/person2x.jpg 2x"
+                  src="./images/index/img-1_person.jpg"
+                  alt="Фотография Игоря Демьяненко"
+                  width="450"
+                  height="460"
+                />
+              </picture>
               <div class="team__overlay">
                 <h3 class="team__names">Игорь Демьяненко</h3>
                 <p class="team__position">Product Designer</p>
@@ -245,13 +269,30 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                srcset="./images/index/olga1x.jpg 1x, ./images/index/olga2x.jpg 2x"
-                src="./images/index/img-2_person.jpg"
-                alt="Фотография Ольги Репиной"
-                width="450"
-                height="460"
-              />
+              <picture>
+                <source
+                  srcset="./images/index/olgadesk.jpg 1x, ./images/index/olgadesk2x.jpg 2x"
+                  media="(min-width:1200px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="./images/index/olgatab.jpg 1x, ./images/index/olgatab2x.jpg 2x"
+                  media="(min-width:768px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="./images/index/olgamob.jpg 1x, ./images/index/olgamob2x.jpg 2x"
+                  media="(max-width:767px)"
+                  type="image/jpeg"
+                />
+                <img
+                  srcset="./images/index/olga1x.jpg 1x, ./images/index/olga2x.jpg 2x"
+                  src="./images/index/img-2_person.jpg"
+                  alt="Фотография Ольги Репиной"
+                  width="450"
+                  height="460"
+                />
+              </picture>
               <div class="team__overlay">
                 <h3 class="team__names">Ольга Репина</h3>
                 <p class="team__position">Frontend Developer</p>
@@ -282,13 +323,30 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                srcset="./images/index/nic.jpg 1x, ./images/index/nic2x.jpg 2x"
-                src="./images/index/img-3_person.jpg"
-                alt="Фотография Николая Тарасова"
-                width="450"
-                height="460"
-              />
+              <picture>
+                <source
+                  srcset="./images/index/nicdesk.jpg 1x, ./images/index/nicdesk2x.jpg 2x"
+                  media="(min-width:1200px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="./images/index/nictab.jpg 1x, ./images/index/nictab2x.jpg 2x"
+                  media="(min-width:768px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="./images/index/nicmob.jpg 1x, ./images/index/nicmob2x.jpg 2x"
+                  media="(max-width:767px)"
+                  type="image/jpeg"
+                />
+                <img
+                  srcset="./images/index/nic.jpg 1x, ./images/index/nic2x.jpg 2x"
+                  src="./images/index/img-3_person.jpg"
+                  alt="Фотография Николая Тарасова"
+                  width="450"
+                  height="460"
+                />
+              </picture>
               <div class="team__overlay">
                 <h3 class="team__names">Николай Тарасов</h3>
                 <p class="team__position">Marketing</p>
@@ -319,13 +377,30 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                srcset="./images/index/mic.jpg 1x, ./images/index/mic2x.jpg 2x"
-                src="./images/index/img-4_person.jpg"
-                alt="Фотография Михаила Ермакова"
-                width="450"
-                height="460"
-              />
+              <picture>
+                <source
+                  srcset="./images/index/micdesk.jpg 1x, ./images/index/micdesk2x.jpg 2x"
+                  media="(min-width:1200px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="./images/index/mictab.jpg 1x, ./images/index/mictab2x.jpg 2x"
+                  media="(min-width:768px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="./images/index/micmob.jpg 1x, ./images/index/micmob2x.jpg 2x"
+                  media="(max-width:767px)"
+                  type="image/jpeg"
+                />
+                <img
+                  srcset="./images/index/mic.jpg 1x, ./images/index/mic2x.jpg 2x"
+                  src="./images/index/img-4_person.jpg"
+                  alt="Фотография Михаила Ермакова"
+                  width="450"
+                  height="460"
+                />
+              </picture>
               <div class="team__overlay">
                 <h3 class="team__names">Михаил Ермаков</h3>
                 <p class="team__position">UI Designer</p>
