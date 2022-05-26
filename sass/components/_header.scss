@@ -24,9 +24,9 @@
   &__nav {
     padding-top: 38px;
     padding-left: 25px;
+    flex-grow: 1;
   }
   &__contacts {
-    margin-top: 302px;
     padding-left: 25px;
     @media screen and (min-width: 768px) {
       display: flex;
@@ -119,6 +119,7 @@
   .menu-social {
     display: flex;
     padding-left: 25px;
+    flex-wrap: wrap;
 
     &__link {
       font-weight: 500;
@@ -155,6 +156,8 @@
   }
   .menu-container.is-open {
     transform: translateX(0);
+    display: flex;
+    flex-direction: column;
   }
 }
 .menu-toggle {
@@ -212,6 +215,8 @@
     fill: $secondaryColor;
     margin-right: 8px;
     @media screen and (min-width: 1200px) {
+      width: 10px;
+      height: 16px;
       margin-right: 10px;
       transition: fill $transitionDuration $timingFunction;
       .header__nav-link:hover & {
@@ -225,7 +230,10 @@
     fill: $secondaryColor;
     margin-right: 8px;
     @media screen and (min-width: 1200px) {
+      width: 16px;
+      height: 12px;
       margin-right: 10px;
+      transition: fill $transitionDuration $timingFunction;
       .header__nav-link:hover & {
         fill: $accentColor;
       }

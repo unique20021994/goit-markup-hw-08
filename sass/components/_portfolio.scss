@@ -141,5 +141,7 @@
     line-height: 1.56;
     color: $lightColor;
     padding: 10px 24px;
+    max-height: 100%;
+    overflow: auto;
   }
 }
